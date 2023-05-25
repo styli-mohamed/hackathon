@@ -8,8 +8,20 @@
  */
 
 const {onRequest} = require("firebase-functions/v2/https");
+const {setGlobalOptions} = require("firebase-functions/v2");
 const logger = require("firebase-functions/logger");
+const express = require('express');
+const app = express();
+const userRoute = require('./routes/user_route');
+// The Firebase Admin SDK to access Firestore.
+const {initializeApp} = require("firebase-admin/app");
 
+initializeApp();
+setGlobalOptions({maxInstances: 10})
+
+app.use('/user',userRoute);
+
+exports.app = onRequest(app);
 // Create and deploy your first functions
 // https://firebase.google.com/docs/functions/get-started
 
