@@ -1,0 +1,41 @@
+{
+    "content": {
+        "_meta": {
+            "name": "Category listing Page Slot",
+            "schema": "https://www.amplience.com/emax/pageslot.json",
+            "deliveryKey": "emaxae-categoryPage",
+            "deliveryId": "16568d9f-633b-4fa6-86e5-d5ed74b7b42f"
+        },
+        "slots": [
+            {
+                "_meta": {
+                    "name": "Section1ASlot",
+                    "schema": "https://www.amplience.com/emax/flexibleslot.json",
+                    "deliveryId": "3783f622-a510-4792-bb60-ccab12ef0abe"
+                },
+                "contentTypes": [
+                    {
+                        "_meta": {
+                            "name": "Shop By Menu Component",
+                            "schema": "https://www.amplience.com/emax/lmgmenunavigationcomponent",
+                            "deliveryId": "c1505514-5de8-4f90-952e-6155aae96cd2"
+                        },
+                        "trendingBanners": [
+                            
+                        ],
+                        "title": "Shop by Category",
+                        "enableShopAllButton": false,
+                        "mobileLayoutname": "3X3",
+                        "type": "LMGMenuNavigationComponent"
+                    }
+                ],
+                "isRestricted": true,
+                "devices": [
+                    "IPHONE",
+                    "ANDROID"
+                ],
+                "slotId": "Section1ASlot"
+            }
+        ]
+    }
+}

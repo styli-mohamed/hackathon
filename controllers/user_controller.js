@@ -13,6 +13,13 @@ const updateUserProfile =async function({profile}){
       .set(profile,{merge:true});
 }
 
+const deleteUserProfile =async function({profile}){
+    const writeResult = await getFirestore()
+      .collection("profile")
+      .doc(profile.id)
+      .delete();
+}
+
 const fetchUserProfiles = async function () {
     const snapshot = await getFirestore().collection('profile').get()
     return snapshot.docs.map(doc => {
@@ -24,5 +31,5 @@ const fetchUserProfiles = async function () {
 }
 
 
-module.exports = { addUserProfile,updateUserProfile,fetchUserProfiles }
+module.exports = { addUserProfile,updateUserProfile,fetchUserProfiles, deleteUserProfile }
 

@@ -1,0 +1,54 @@
+{
+    "VeBNoR":{
+        "topwear":{
+            "S":{
+                "Chest":"37",
+                "Shoulder":"15.5",
+                "Length":"26.5"
+            },
+            "M":{
+                "Chest":"39",
+                "Shoulder":"16.5",
+                "Length":"27"
+            },
+            "L":{
+                "Chest":"41",
+                "Shoulder":"17.5",
+                "Length":"27.5"
+            }
+
+        },
+        "bottomwear":{
+
+        },
+        "shoewear":{
+
+        }
+    },
+    "VTEXX":{
+        "topwear":{
+            "S":{
+                "Chest":"38",
+                "Shoulder":"17.5",
+                "Length":"28"
+            },
+            "M":{
+                "Chest":"40",
+                "Shoulder":"18.5",
+                "Length":"28.5"
+            },
+            "L":{
+                "Chest":"41",
+                "Shoulder":"19",
+                "Length":"29"
+            }
+
+        },
+        "bottomwear":{
+
+        },
+        "shoewear":{
+
+        }
+    }
+}

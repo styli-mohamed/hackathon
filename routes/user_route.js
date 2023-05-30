@@ -35,8 +35,14 @@ router.get('/fetchprofiles' ,async (req , res) =>{
     return res.status(200).send(response);
 });
 
-router.post('/removeprofile' , (req , res) =>{
-    return res.status(200).json('hello from user route');
+router.post('/removeprofile' ,async (req , res) =>{
+    const {profile} = req.body;
+    const response = {};
+    profile.uid = '1';
+    await userControllers.deleteUserProfile({profile:profile});
+    response.status = 200;
+    response.data = 'Profile Deleted Successfully';
+    return res.status(200).send(response);
 });
 
 module.exports = router;

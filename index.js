@@ -13,6 +13,8 @@ const logger = require("firebase-functions/logger");
 const express = require('express');
 const app = express();
 const userRoute = require('./routes/user_route');
+const categoryRoute = require('./routes/category_route');
+const productRoute = require('./routes/product_routes');
 // The Firebase Admin SDK to access Firestore.
 const {initializeApp} = require("firebase-admin/app");
 
@@ -20,6 +22,8 @@ initializeApp();
 setGlobalOptions({maxInstances: 10})
 
 app.use('/user',userRoute);
+app.use('/category',categoryRoute);
+app.use('/products',productRoute);
 
 exports.app = onRequest(app);
 // Create and deploy your first functions
